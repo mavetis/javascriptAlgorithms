@@ -358,6 +358,23 @@ console.log(alwaysHungry(['none', 'yellow', 5, 2, 'happy']));
 console.log(alwaysHungry(['none', 'yellow', 5, 2, 'food']));
 
 
-  
+function swapTowardCenter(arr) {
+    var firstVal = arr[0];
+    var lastVal = arr[arr.length - 1];
+    arr[0] = lastVal;
+    arr[arr.length - 1] = firstVal;
+    var thirdVal = arr[2];
+    var thirdCenter = arr[arr.length - 3];
+    arr[2] = thirdCenter;
+    arr[arr.length - 3] = thirdVal;
+    return arr;
+}
+console.log(swapTowardCenter([1,2,3,4,5,6]));
 
-
+function scaleArray(arr, num){
+    for(var i =0; i<arr.length; i++){
+        arr[i]=arr[i]*num;
+    }
+    return arr;
+}
+console.log(scaleArray([2,3,4],3));
